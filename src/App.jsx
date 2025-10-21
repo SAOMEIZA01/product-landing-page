@@ -5,6 +5,8 @@ import Features from './Components/Features'
 import Pricing from './Components/Pricing'
 import Testimonials from './Components/Testimonials'
 import CTA from './Components/CTA'
+import ThemeToggle from './Components/ThemeToggle'
+import Footer from './Components/Footer'
 
 const App = () => {
   return (
@@ -14,7 +16,9 @@ const App = () => {
       <Features />
       <Pricing />
       <Testimonials />
+      <ThemeToggle />
       <CTA />
+      <Footer />
     </div>
   )
 }

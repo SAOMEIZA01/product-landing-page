@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 
 const Navbar = ({
   sections = ["home", "features", "pricing", "testimonials", "contact"],
@@ -25,11 +24,11 @@ const Navbar = ({
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4 bg-gradient-to-r from-sky-500 to-indigo-600 backdrop-blur-lg">
-          <div className="flex items-center gap-3">
+      <header className="fixed top-0 mx-0 w-full z-50">
+        <div className="flex items-center justify-between px-10 py-4 font-sm bg-gradient-to-r from-sky-500 to-indigo-600 backdrop-blur-lg">
+          <div className="flex items-center">
             <button
-              className="md:hidden p-2 rounded-md bg-white shadow"
+              className="md:hidden left-6 top-3 p-2 rounded-md bg-white dark:bg-slate-600 shadow"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -37,14 +36,14 @@ const Navbar = ({
             </button>
 
             <h1
-              className="text-xl font-bold text-white hidden md:block cursor-pointer"
+              className="text-xl font-bold text-white dark:text-slate-200 hidden md:block cursor-pointer"
               onClick={() => scrollTo("home")}
             >
               FlowSync
             </h1>
           </div>
 
-          <nav className="hidden md:flex gap-8 items-center text-sm font-medium text-white dark:text-slate-100">
+          <nav className="hidden md:flex gap-6 items-center text-sm font-medium text-white dark:text-slate-300">
             {sections.map((s) => (
               <button
                 key={s}
@@ -57,7 +56,7 @@ const Navbar = ({
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <button className="px-4 py-2 rounded-full bg-sky-500 text-white hover:bg-blue-700">
+            <button className="px-4 py-2 rounded-full bg-sky-500 dark:bg-sky-800 md:font-small text-white hover:bg-blue-700">
               Get started
             </button>
           </div>
@@ -65,6 +64,7 @@ const Navbar = ({
       </header>
 
       {/* Mobile overlay + sliding sidebar (keeps mounted for smooth transition) */}
+
       <div
         className={`fixed inset-0 z-40 ${
           isOpen ? "pointer-events-auto" : "pointer-events-none"
@@ -73,7 +73,7 @@ const Navbar = ({
         {/* Backdrop */}
         <div
           onClick={() => setIsOpen(false)}
-          className={`absolute inset-0 bg-black/40 transition-opacity ${
+          className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity ${
             isOpen ? "opacity-100" : "opacity-0"
           }`}
           aria-hidden="true"
@@ -108,9 +108,6 @@ const Navbar = ({
           </nav>
         </aside> 
       </div>
-
-      <ThemeToggle />
-
     </>
   );
 };

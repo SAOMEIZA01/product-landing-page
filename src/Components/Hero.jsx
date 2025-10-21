@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex items-center justify-center bg-gradient-to-r from-sky-500 to-indigo-600 text-white px-12 py-28"
+      className="flex items-center justify-center bg-gradient-to-r from-sky-500 to-indigo-600 text-white dark:text-slate-200 px-12 py-28"
     >
       <div className="max-w-5xl mx-auto my-10 grid gap-8 md:grid-cols-2 items-center">
         <div>
@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="mt-6 flex gap-4">
             <a
               href="#pricing"
-              className="inline-block bg-white text-blue-600 px-5 py-3 rounded-full font-semibold shadow hover:scale-[.99]"
+              className="inline-block bg-white dark:bg-slate-600 text-blue-600 dark:text-white px-5 py-3 rounded-full font-semibold shadow hover:scale-[.99]"
             >
               Get started
             </a>
@@ -44,14 +44,14 @@ const Hero = () => {
 
         <div className="flex items-center justify-center">
           {/* Simple visual mockup card */}
-          <div className="w-full max-w-sm bg-white/10 border border-white/20 rounded-2xl p-6 shadow-lg">
-            <div className="h-48 bg-white/20 rounded-lg p-3 flex flex-col gap-2">
-              <div className="h-6 w-3/4 bg-white/30 rounded" />
-              <div className="h-4 w-1/2 bg-white/20 rounded" />
+          <div className="w-full max-w-sm bg-white/10 dark:bg-slate-700 opacity-60 border border-white/20 rounded-2xl p-6 shadow-lg dark:shadow-sm">
+            <div className="h-48 bg-white/20 dark:bg-slate-600 rounded-lg p-3 flex flex-col gap-2">
+              <div className="h-6 w-3/4 bg-white/30 dark:bg-slate-500 rounded" />
+              <div className="h-4 w-1/2 bg-white/20 dark:bg-slate-400 rounded" />
               <div className="mt-auto flex gap-2">
-                <div className="h-8 w-8 bg-white/30 rounded" />
-                <div className="h-8 w-8 bg-white/30 rounded" />
-                <div className="h-8 w-8 bg-white/30 rounded" />
+                <div className="h-8 w-8 bg-white/30 dark:bg-slate-400 rounded" />
+                <div className="h-8 w-8 bg-white/30 dark:bg-slate-400 rounded" />
+                <div className="h-8 w-8 bg-white/30 dark:bg-slate-400 rounded" />
               </div>
             </div>
           </div>

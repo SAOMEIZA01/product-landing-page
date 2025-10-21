@@ -1,7 +1,7 @@
 const CTA = () => (
   <section
     id="contact"
-    className="py-16 px-6 bg-gradient-to-r from-indigo-600 to-sky-500 text-white text-center"
+    className="py-16 px-6 bg-gradient-to-r from-indigo-600 to-sky-500 text-white dark:text-slate-300 text-center"
   >
     <div className="max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold">Ready to simplify your workflow?</h2>
@@ -11,13 +11,13 @@ const CTA = () => (
       <div className="flex justify-center gap-4">
         <a
           href="#pricing"
-          className="px-6 py-3 rounded-full bg-white text-indigo-600 font-semibold"
+          className="px-6 py-3 rounded-full bg-white dark:bg-slate-700 dark:text-white text-indigo-600 font-semibold"
         >
           Start free
         </a>
         <a
           href="#features"
-          className="px-6 py-3 rounded-full border border-white/30"
+          className="px-6 py-3 rounded-full border border-white/30 dark:border-white/20"
         >
           Book demo
         </a>

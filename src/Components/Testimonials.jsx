@@ -21,7 +21,7 @@ const reviews = [
 const Testimonials = () => (
   <section
     id="testimonials"
-    className="py-16 px-6 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
+    className="py-16 px-6 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100"
   >
     <div className="max-w-6xl mx-auto text-center mb-10">
       <h2 className="text-3xl font-bold">What our users say</h2>
@@ -34,12 +34,12 @@ const Testimonials = () => (
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.08 }}
-          className="p-6 bg-gray-200 dark:bg-slate-800 rounded-xl shadow-lg"
+          className="p-6 bg-gray-200 dark:bg-slate-600 rounded-xl shadow-lg"
         >
           <p className="italic">“{r.quote}”</p>
           <footer className="mt-4 font-semibold">
             {r.name}{" "}
-            <span className="text-sm font-normal text-slate-500">
+            <span className="text-sm font-normal text-slate-500 dark:text-slate-300">
               — {r.role}
             </span>
           </footer>

@@ -18,12 +18,20 @@ const ThemeToggle = () => {
     } catch {console.error();
     }
   }, [dark]);
+  
+  const [isWide, setIsWide] = useState(window.innerWidth >= 765);
+  
+  useEffect(()=>{
+    const handleResize = () => setIsWide(window.innerWidth >=765);
+    window.addEventListener('resize', handleResize);
 
+    return() => window.removeEventListener('resize', handleResize);
+    }, []);
   return (
     <button
       onClick={() => setDark(!dark)}
       aria-label="Toggle theme"
-      className="fixed top-3 right-6 p-3 rounded-full bg-white shadow z-50"
+      className={`fixed right-8 p-3 rounded-full bg-white dark:bg-slate-600 shadow z-50 ${isWide ? "bottom-6" : "top-3"}`}
     >
       {dark ? <Sun size={18} /> : <Moon size={18} />}
     </button>

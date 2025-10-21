@@ -80,7 +80,7 @@ const Navbar = ({
         />
         {/* Sidebar */}
         <aside
-          className={`absolute top-0 left-0 h-full w-64 bg-white dark:bg-slate-900 shadow transform transition-transform duration-300 ${
+          className={`absolute top-0 left-0 h-full w-40 bg-white dark:bg-slate-700 shadow transform transition-transform duration-300 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -95,7 +95,7 @@ const Navbar = ({
             </button>
           </div>
 
-          <nav className="flex flex-col p-4 space-y-4">
+          <nav className="flex flex-col p-4 space-y-10">
             {sections.map((s) => (
               <button
                 key={s}

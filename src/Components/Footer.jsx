@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-gray-300 py-10 px-6" id="footer">
+    <footer className="bg-slate-700 dark:bg-slate-900 text-gray-300 py-10 px-6" id="footer">
       <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ const Footer = () => {
           <Mail />
         </div>
       </motion.div>
-      <p className="text-center font-sm text-gray-500 mt-8">© {new Date().getFullYear()}. FlowSync. All Rights Reserved.</p>
+      <p className="text-center font-sm text-gray-400 dark:text-gray-500 mt-8">© {new Date().getFullYear()}. FlowSync. All Rights Reserved.</p>
     </footer>
   );
 };

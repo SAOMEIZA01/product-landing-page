@@ -19,7 +19,7 @@ const ThemeToggle = () => {
     }
   }, [dark]);
   
-  const [isWide, setIsWide] = useState(window.innerWidth >= 765);
+  const [isWide, setIsWide] = useState();
   
   useEffect(()=>{
     const handleResize = () => setIsWide(window.innerWidth >=765);
